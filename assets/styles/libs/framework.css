@@ -27,6 +27,11 @@
   align-items: center;
   justify-content: space-between;
 }
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .d-grid {
   display: grid;
 }
@@ -84,6 +89,9 @@
   margin-bottom: 20px;
 }
 
+.fw-bold {
+  font-weight: bold;
+}
 .fs-14 {
   font-size: 14px;
 }
@@ -108,6 +116,15 @@
 .c-grey {
   color: var(--grey);
 }
+.c-blue {
+  color: var(--blue);
+}
+.c-orange {
+  color: var(--orange);
+}
+.c-green {
+  color: var(--green);
+}
 
 .bg-white {
   background-color: white;
@@ -118,9 +135,16 @@
 .bg-blue {
   background-color: var(--blue);
 }
+.bg-orange {
+  background-color: var(--orange);
+}
+.bg-green {
+  background-color: var(--green);
+}
 
 .b-none {
   border: none;
+  outline: none;
 }
 .rad-6 {
   border-radius: 6px;
