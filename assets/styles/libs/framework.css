@@ -5,8 +5,13 @@
   --green: #22c55e;
   --red: #f44336;
   --grey: #888;
+
   --transition: 0.3s;
 }
+.p-relative {
+  position: relative;
+}
+
 .d-flex {
   display: flex;
 }
@@ -40,17 +45,6 @@
   margin-top: 0;
 }
 
-.c-black {
-  color: black;
-}
-.bg-white {
-  background-color: white;
-}
-
-.p-relative {
-  position: relative;
-}
-
 .text-c {
   text-align: center;
 }
@@ -58,6 +52,16 @@
   font-size: 14px;
 }
 
+.c-black {
+  color: black;
+}
+.bg-white {
+  background-color: white;
+}
+
 .red-6 {
   border-radius: 6px;
+}
+.red-10 {
+  border-radius: 10px;
 }
