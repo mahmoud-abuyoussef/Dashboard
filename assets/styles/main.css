@@ -315,3 +315,24 @@ img {
     margin: 10px auto;
   }
 }
+
+.latest-tasks .task-row:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.latest-tasks .task-row .info {
+  flex-grow: 1;
+}
+.latest-tasks .task-row.complete {
+  opacity: 0.3;
+}
+.latest-tasks .task-row.complete h3,
+.latest-tasks .task-row.complete p {
+  text-decoration: line-through;
+}
+.latest-tasks .task-row .delete {
+  cursor: pointer;
+  transition: var(--transition);
+}
+.latest-tasks .task-row .delete:hover {
+  color: var(--red);
+}
