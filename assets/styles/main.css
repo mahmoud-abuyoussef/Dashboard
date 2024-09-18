@@ -290,3 +290,13 @@ a {
 .yearly-target .details .progress > .green span::before {
   border-top-color: var(--green);
 }
+
+.tickets-statistics .statistic {
+  width: calc(50% - 10px);
+  border: 1px solid #ccc;
+}
+@media (max-width: 767px) {
+  .tickets-statistics .statistic {
+    width: 100%;
+  }
+}
