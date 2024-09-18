@@ -40,6 +40,9 @@ ul {
 a {
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+}
 
 .page {
   min-height: 100vh;
@@ -298,5 +301,17 @@ a {
 @media (max-width: 767px) {
   .tickets-statistics .statistic {
     width: 100%;
+  }
+}
+
+.latest-news .news-row:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.latest-news .news-row .info {
+  flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .latest-news .news-row .label {
+    margin: 10px auto;
   }
 }
