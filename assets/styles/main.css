@@ -484,3 +484,34 @@ img {
 .social-media-statistics .social-media-account.linkedin a {
   background-color: #0a66c2;
 }
+
+.projects-table .responsive-table {
+  overflow-x: auto;
+}
+.projects-table table {
+  min-width: 1000px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.projects-table table th {
+  text-align: left;
+}
+.projects-table table th,
+.projects-table table td {
+  padding: 15px;
+  border: 1px solid #eee;
+  transition: var(--transition);
+}
+.projects-table table tr:hover td {
+  background-color: #faf7f7;
+}
+.projects-table table td img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: white;
+}
+.projects-table table td img:not(:first-child) {
+  margin-left: -20px;
+}
