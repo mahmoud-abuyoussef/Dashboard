@@ -423,3 +423,14 @@ img {
 .reminder.red::before {
   background-color: var(--red);
 }
+
+.latest-post .avatar {
+  width: 48px;
+  height: 48px;
+}
+.latest-post .post-content {
+  text-transform: capitalize;
+  line-height: 1.8;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
