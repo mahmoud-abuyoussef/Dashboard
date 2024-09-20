@@ -39,6 +39,7 @@ ul {
 }
 a {
   text-decoration: none;
+  transition: var(--transition);
 }
 img {
   max-width: 100%;
@@ -56,6 +57,10 @@ textarea {
 textarea {
   resize: none;
 }
+button {
+  transition: var(--transition);
+  cursor: pointer;
+}
 
 .toggle-checkbox {
   appearance: none;
@@ -67,7 +72,6 @@ textarea {
   height: 32px;
   background-color: #ccc;
   border-radius: 16px;
-  transition: var(--transition);
   cursor: pointer;
 }
 .toggle-switch::before {
@@ -127,10 +131,6 @@ textarea {
   height: 12px;
   border: 4px solid white;
   border-radius: 50%;
-}
-.sidebar > ul li a {
-  margin-bottom: 5px;
-  transition: var(--transition);
 }
 .sidebar > ul li a.active,
 .sidebar > ul li a:hover {
@@ -260,9 +260,6 @@ textarea {
   margin: 0 15px 15px auto;
   transition: var(--transition);
 }
-.welcome .visit:hover {
-  background-color: var(--blue-alt);
-}
 @media (max-width: 767px) {
   .welcome .intro {
     padding-bottom: 30px;
@@ -282,9 +279,6 @@ textarea {
   margin-left: auto;
   transition: var(--transition);
   cursor: pointer;
-}
-.quick-draft .save:hover {
-  background-color: var(--blue-alt);
 }
 
 .yearly-target .target-row .icon {
@@ -574,6 +568,11 @@ textarea {
     margin: 0 10px;
   }
 }
+.settings-page :disabled {
+  color: #bbb;
+  background-color: #f0f4f8;
+  cursor: no-drop;
+}
 .settings-page .site-control .close-message {
   min-height: 150px;
 }
@@ -581,4 +580,24 @@ textarea {
 .settings-page .general-info .email {
   display: inline-flex;
   width: calc(100% - 80px);
+}
+
+.settings-page .security-info > div:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+
+.settings-page .social-info i {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border-right: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  transition: var(--transition);
+}
+.settings-page .social-info input {
+  height: 40px;
+  background-color: #f6f6f6;
+}
+.settings-page .social-info > div:focus-within i {
+  color: black;
 }

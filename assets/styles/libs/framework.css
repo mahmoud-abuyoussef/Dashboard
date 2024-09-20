@@ -229,3 +229,7 @@
   background-color: white;
   border-radius: 10px;
 }
+
+.btn-hover:hover {
+  background-color: var(--blue-alt);
+}
