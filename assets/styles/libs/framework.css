@@ -1,14 +1,3 @@
-:root {
-  --blue: #0075ff;
-  --blue-alt: #0d69d5;
-  --orange: #f59e0b;
-  --green: #22c55e;
-  --red: #f44336;
-  --grey: #888;
-
-  --transition: 0.3s;
-}
-
 .p-relative {
   position: relative;
 }
@@ -94,6 +83,9 @@
   padding-left: 10px;
 }
 
+.m-15 {
+  margin: 15px;
+}
 .m-20 {
   margin: 20px;
 }

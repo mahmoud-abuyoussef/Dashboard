@@ -26,10 +26,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--blue-alt);
 }
-
 html {
   scroll-behavior: smooth;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   min-height: 100vh;
@@ -646,4 +646,70 @@ button {
 }
 .settings-page .widget-control .control input[type="checkbox"]:checked + label::after {
   transform: translateY(-50%) scale(1);
+}
+
+.backup-manager input[type="radio"] {
+  appearance: none;
+}
+.backup-manager .date label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.backup-manager .date label::before,
+.backup-manager .date label::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.backup-manager .date label::before {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--grey);
+}
+.backup-manager .date label::after {
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  transform: scale(0);
+  transition: var(--transition);
+}
+.backup-manager .date input[type="radio"]:checked + label::before {
+  border-color: var(--blue);
+}
+.backup-manager .date input[type="radio"]:checked + label::after {
+  background-color: var(--blue);
+  transform: scale(1);
+}
+
+.backup-manager .servers {
+  border-top: 1px solid #eee;
+}
+@media (max-width: 767px) {
+  .backup-manager .servers {
+    flex-wrap: wrap;
+  }
+}
+.backup-manager .servers .server {
+  position: relative;
+  border: 2px solid #eee;
+}
+.backup-manager .servers .server:not(:last-child) {
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .backup-manager .servers .server:not(:last-child) {
+    margin-right: 0;
+  }
+}
+.backup-manager .servers .server label {
+  cursor: pointer;
+}
+.backup-manager .servers input[type="radio"]:checked + .server {
+  border-color: var(--blue);
+  color: var(--blue);
 }
