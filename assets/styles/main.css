@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  user-select: none;
 }
 body {
   min-height: 100vh;
@@ -600,4 +601,49 @@ button {
 }
 .settings-page .social-info > div:focus-within i {
   color: black;
+}
+
+.settings-page .widget-control .control input[type="checkbox"] {
+  appearance: none;
+}
+.settings-page .widget-control .control label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.settings-page .widget-control .control label::before,
+.settings-page .widget-control .control label::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.settings-page .widget-control .control label::before {
+  content: "";
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--grey);
+}
+.settings-page .widget-control .control label:hover::before {
+  border-color: var(--blue-alt);
+}
+.settings-page .widget-control .control label::after {
+  content: "\f00c";
+  transform: translateY(-50%) scale(0) rotate(360deg);
+  font-family: var(--fa-style-family-classic);
+  font-weight: 900;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--blue);
+}
+.settings-page .widget-control .control input[type="checkbox"]:checked + label::after {
+  transform: translateY(-50%) scale(1);
 }
