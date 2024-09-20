@@ -175,7 +175,6 @@ textarea {
   width: 160px;
   padding-left: 30px;
   margin-left: 5px;
-  border: 1px solid #ccc;
   border-radius: 10px;
   transition: width var(--transition);
 }
@@ -345,7 +344,6 @@ textarea {
 
 .tickets-statistics .statistic {
   width: calc(50% - 10px);
-  border: 1px solid #ccc;
 }
 @media (max-width: 767px) {
   .tickets-statistics .statistic {
@@ -568,14 +566,18 @@ textarea {
 .settings-page {
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
-.settings-page .close-message {
-  border: 1px solid #ccc;
-  min-height: 150px;
-}
 @media (max-width: 767px) {
   .settings-page {
     grid-template-columns: minmax(100px, 1fr);
     gap: 10px;
     margin: 0 10px;
   }
+}
+.settings-page .site-control .close-message {
+  min-height: 150px;
+}
+
+.settings-page .general-info .email {
+  display: inline-flex;
+  width: calc(100% - 80px);
 }

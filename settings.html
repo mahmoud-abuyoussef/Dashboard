@@ -80,7 +80,7 @@
         </header>
         <h1 class="p-relative">Settings</h1>
         <div class="settings-page m-20 d-grid gap-20">
-          <div class="p-20 bg-white rad-10">
+          <div class="site-control widget">
             <h2 class="mb-10">Site Control</h2>
             <p class="mb-20 c-grey fs-15">Control The Website If There Is Maintenance</p>
             <div class="mb-15 between-flex">
@@ -95,7 +95,24 @@
                 </label>
               </div>
             </div>
-            <textarea class="close-message p-10 rad-6 d-block w-full" placeholder="Close Message Content"></textarea>
+            <textarea class="close-message p-10 rad-6 d-block w-full border-ccc" placeholder="Close Message Content"></textarea>
+          </div>
+          <div class="general-info widget">
+            <h2 class="mb-10">General Info</h2>
+            <p class="mb-20 c-grey fs-15">General Information About Your Account</p>
+            <div class="mb-15">
+              <label class="c-grey fs-14 d-block mb-10" for="firstname">First Name</label>
+              <input class="p-10 rad-10 d-block w-full border-ccc" type="text" id="firstname" placeholder="First Name" />
+            </div>
+            <div class="mb-15">
+              <label class="c-grey fs-14 d-block mb-10" for="lastname">Last Name</label>
+              <input class="p-10 rad-10 d-block w-full border-ccc" type="text" id="lastname" placeholder="Last Name" />
+            </div>
+            <div>
+              <label class="c-grey fs-14 d-block mb-10" for="email">Email</label>
+              <input class="p-10 rad-10 d-block w-full border-ccc mr-10 email" type="email" id="email" placeholder="Email" value="o@nn.sa" disabled />
+              <a class="change-email c-blue" href="#">Change</a>
+            </div>
           </div>
         </div>
       </main>
