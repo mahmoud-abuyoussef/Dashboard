@@ -59,6 +59,7 @@ textarea {
 
 .toggle-checkbox {
   appearance: none;
+  display: none;
 }
 .toggle-switch {
   position: relative;
