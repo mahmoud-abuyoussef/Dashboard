@@ -713,3 +713,59 @@ button {
   border-color: var(--blue);
   color: var(--blue);
 }
+
+@media (max-width: 767px) {
+  .profile-page .overview {
+    flex-direction: column;
+  }
+}
+.profile-page .avatar {
+  width: 300px;
+}
+@media (min-width: 768px) {
+  .profile-page .avatar {
+    border-right: 1px solid #eee;
+  }
+}
+.profile-page .avatar > img {
+  width: 120px;
+}
+.profile-page .avatar .level {
+  width: 70%;
+  height: 4px;
+  margin: auto;
+  overflow: hidden;
+}
+.profile-page .avatar .level span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.profile-page .info .info-row {
+  transition: var(--transition);
+}
+.profile-page .info .info-row:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.profile-page .info .info-row:hover {
+  background-color: #f9f9f9;
+}
+.profile-page .info .info-row > div {
+  min-width: 250px;
+  padding: 10px 0 0;
+}
+.profile-page .info .info-row h4 {
+  font-weight: normal;
+}
+
+.profile-page .info .info-row .toggle-switch {
+  height: 20px;
+}
+.profile-page .info .info-row .toggle-switch::before {
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+}
+.profile-page .info .info-row .toggle-checkbox:checked + .toggle-switch::before {
+  left: 62px;
+}

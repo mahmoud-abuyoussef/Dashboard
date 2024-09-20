@@ -210,6 +210,9 @@
 .rad-10 {
   border-radius: 10px;
 }
+.rad-half {
+  border-radius: 50%;
+}
 
 .btn-shape {
   padding: 4px 10px;
@@ -217,7 +220,6 @@
 }
 
 .widget {
-  padding: 20px;
   background-color: white;
   border-radius: 10px;
 }
