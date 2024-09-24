@@ -792,8 +792,29 @@ button {
   font-size: 14px;
 }
 .profile-page .skills ul li span:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 4px;
 }
 .profile-page .activities {
   flex-grow: 2;
+}
+@media (max-width: 767px) {
+  .profile-page .activities .activity {
+    flex-direction: column;
+  }
+  .profile-page .activities .activity img {
+    margin: 0 0 15px;
+  }
+  .profile-page .activities .activity .date {
+    margin: 15px 0 0 0;
+  }
+}
+.profile-page .activities .activity:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.profile-page .activities .activity img {
+  width: 64px;
+  margin-right: 10px;
+}
+.profile-page .activities .activity .info {
+  flex-grow: 1;
 }
