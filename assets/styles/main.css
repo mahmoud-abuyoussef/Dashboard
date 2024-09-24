@@ -769,3 +769,31 @@ button {
 .profile-page .info .info-row .toggle-checkbox:checked + .toggle-switch::before {
   left: 62px;
 }
+
+@media (max-width: 767px) {
+  .profile-page .other-data {
+    flex-direction: column;
+  }
+}
+.profile-page .skills {
+  flex-grow: 1;
+}
+.profile-page .skills ul li {
+  padding: 15px 0;
+}
+.profile-page .skills ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.profile-page .skills ul li span {
+  padding: 4px 10px;
+  background-color: #eee;
+  display: inline-flex;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.profile-page .skills ul li span:not(:last-child) {
+  margin-right: 5px;
+}
+.profile-page .activities {
+  flex-grow: 2;
+}
