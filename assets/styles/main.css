@@ -991,7 +991,6 @@ button {
 .friends-page .friend .icons i {
   margin-right: 5px;
 }
-
 .friends-page .friend .icons .vip {
   position: absolute;
   top: 50%;
@@ -1001,6 +1000,16 @@ button {
   opacity: 0.2;
 }
 
+.files-page {
+  flex-direction: row-reverse;
+  align-items: start;
+}
+@media (max-width: 767px) {
+  .files-page {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
 .files-page .files-statistics {
   min-width: 260px;
 }
@@ -1043,4 +1052,19 @@ button {
   50% {
     transform: translateY(-5px);
   }
+}
+
+.files-page .files-content {
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.files-page .files-content img {
+  width: 64px;
+  height: 64px;
+  transition: var(--transition);
+}
+.files-page .files-content .file:hover img {
+  transform: rotate(5deg);
+}
+.files-page .files-content .info {
 }
