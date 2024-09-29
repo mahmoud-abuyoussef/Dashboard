@@ -32,46 +32,15 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
-  min-height: 100vh;
   font-family: "Open Sans", sans-serif;
-}
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-  transition: var(--transition);
-}
-img {
-  max-width: 100%;
-}
-input,
-button,
-textarea {
-  border: none;
-}
-input,
-textarea {
-  outline: none;
-  caret-color: var(--blue);
-}
-textarea {
-  resize: none;
-}
-button {
-  transition: var(--transition);
-  cursor: pointer;
 }
 
 .toggle-checkbox {
   appearance: none;
-  display: none;
 }
 .toggle-switch {
-  position: relative;
   width: 78px;
   height: 32px;
-  background-color: #ccc;
   border-radius: 16px;
   cursor: pointer;
 }
@@ -102,7 +71,6 @@ button {
 }
 
 .page {
-  min-height: 100vh;
   background-color: #f1f5f9;
 }
 
@@ -137,10 +105,6 @@ button {
 .sidebar > ul li a:hover {
   background-color: #f6f6f6;
 }
-.sidebar > ul li a span {
-  font-style: 14px;
-  margin-left: 10px;
-}
 @media (max-width: 767px) {
   .sidebar {
     width: 58px;
@@ -159,9 +123,6 @@ button {
   }
 }
 
-.content {
-  overflow: hidden;
-}
 .header .search::before {
   content: "\f002";
   position: absolute;
@@ -1065,4 +1026,58 @@ button {
 }
 .files-page .files-content .file:hover img {
   transform: rotate(5deg);
+}
+
+.plans-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+@media (max-width: 767px) {
+  .plans-page {
+    grid-template-columns: minmax(250px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 20px;
+  }
+}
+.plans-page .plan .top {
+  border: 3px solid white;
+  outline: 3px solid transparent;
+  margin-bottom: 15px;
+}
+.plans-page .plan.green .top {
+  outline-color: var(--green);
+}
+.plans-page .plan.blue .top {
+  outline-color: var(--blue);
+}
+.plans-page .plan.orange .top {
+  outline-color: var(--orange);
+}
+.plans-page .plan .price {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  font-size: 40px;
+}
+.plans-page .plan .price span:first-child {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  font-size: 25px;
+}
+.plans-page .plan ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+.plans-page .plan ul li i:first-child {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.plans-page .plan ul li .help {
+  color: var(--grey);
+  margin-left: auto;
+  cursor: pointer;
 }
