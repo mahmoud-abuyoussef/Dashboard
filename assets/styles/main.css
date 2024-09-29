@@ -873,10 +873,42 @@ button {
   padding-top: 15px;
   margin-top: 15px;
 }
+@media (max-width: 767px) {
+  .projects-page .project .requirements {
+    flex-direction: column;
+  }
+}
 .projects-page .project .requirements span {
   padding: 3px 8px;
   margin-left: 5px;
   width: fit-content;
 }
+@media (max-width: 767px) {
+  .projects-page .project .requirements span {
+    margin-bottom: 15px;
+  }
+}
 .projects-page .project .info {
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+@media (max-width: 767px) {
+  .projects-page .project .info {
+    flex-direction: column;
+  }
+}
+.projects-page .project .info .progress {
+  position: relative;
+  width: 260px;
+  height: 8px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.projects-page .project .info .progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 6px;
 }
