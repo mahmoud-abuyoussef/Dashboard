@@ -912,3 +912,41 @@ button {
   height: 100%;
   border-radius: 6px;
 }
+
+.courses-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+  .courses-page {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10;
+  }
+}
+.courses-page .course {
+  overflow: hidden;
+}
+.courses-page .course .instructor {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 64px;
+  height: 64px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.courses-page .course .description {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+.courses-page .course .course-info {
+  border-top: 1px solid #eee;
+}
+.courses-page .course .course-info .title {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 27px;
+}
